@@ -1,6 +1,5 @@
 from ucimlrepo import fetch_ucirepo
 import matplotlib.pyplot as plt
-import time
 
 
 def map_target_array(iris_class):
