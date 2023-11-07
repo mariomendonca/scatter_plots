@@ -1,5 +1,6 @@
 from ucimlrepo import fetch_ucirepo
 import matplotlib.pyplot as plt
+import time
 
 
 def map_target_array(iris_class):
@@ -25,6 +26,13 @@ ax.set_title("Iris 3d plot (Sepal length vs Sepal width vs Petal Length)")
 ax.set_xlabel('Sepal length')
 ax.set_ylabel('Sepal width')
 ax.set_zlabel('Petal length')
+
+legend_elements = [
+    plt.Line2D([0], [0], color='red', lw=3, label='setosa'),
+    plt.Line2D([0], [0], color='green', lw=3, label='virginica'),
+    plt.Line2D([0], [0], color='blue', lw=3, label='versicolor')
+]
+ax.legend(handles=legend_elements, loc='upper left')
 
 ax.scatter(sepal_length, sepal_width, petal_length, s=10, c=[colors[i] for i in numbered_targets])
 plt.show()
