@@ -15,8 +15,6 @@ concavity = features["concavity1"]
 radius = features["radius1"]
 smoothness = features["smoothness1"]
 compactness = features["compactness1"]
-for i in features:
-    print(i)
 
 fig, ax = plt.subplots(2, 3)
 plt.subplots_adjust(hspace=0.4, wspace=0.25)
